@@ -1,0 +1,6 @@
+{
+  "files.associations": {
+    "*.content": "markdown",
+    "*.template": "html"
+  }  
+}
