@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>empty site - ブログ</title>
+		<link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css">
+		<link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.0/build/styles/default.min.css">
+	</head>
+
+	<body>
+		<nav class="flex">
+		  <p>Example</p>
+		  <div class="ml-10">
+		    <a href="/" class="pl-5 pr-5">ホーム</a>
+		    <a href="/blog.html" class="pl-5 pr-5">ブログ</a>
+		  </div>
+		</nav>
+		<div id="posts"></div>
+		<script>
+		const postList = document.getElementById('posts')
+		const itemList = [{"fileName":"2020-09-08-sample.content","attributes":{"title":"サンプル記事","description":"記事の説明文"}}]
+		itemList.map(item => {
+		  // a要素の生成
+		  const aElement = document.createElement('a')
+		  const postName = item.fileName.replace('.content', '')
+		  aElement.href = `/post/${postName}.html`
+		
+		  // h2要素の生成
+		  const headingElement = document.createElement('h2')
+		  headingElement.innerText = item.attributes.title
+		  aElement.appendChild(headingElement)
+		
+		  // p要素の生成
+		  const pElement = document.createElement('p')
+		  pElement.innerText = item.attributes.description
+		  aElement.appendChild(pElement)
+		
+		  // a要素をマウント
+		  postList.appendChild(aElement)
+		})
+		</script>
+	</body>
+</html>

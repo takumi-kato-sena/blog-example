@@ -1,0 +1,17 @@
+---
+title: サンプル記事
+description: 記事の説明文
+---
+
+# $[title]
+
+## Heading
+
+- Hoge
+- Fuga
+
+```js
+const hello = (name) => {
+  console.log(`Hello, ${name}!`)
+}
+```

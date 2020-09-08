@@ -1,4 +1,12 @@
-'index'
-'index'
+'blog'
+'ブログ'
 'template/page.template'
+
+'index'
+'ホーム'
+'template/page.template'
+
+'post/2020-09-08-sample'
+'サンプル記事'
+'template/blog.template'
 

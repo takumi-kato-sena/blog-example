@@ -1,8 +1,11 @@
-11:22:28 Tuesday September 08 2020
+20:12:37 Tuesday September 08 2020
 'index'
-'index'
+'ホーム'
 'template/page.template'
 
 'content/index.content'
+'post-build.js'
+'pre-build.js'
 'template/head.content'
+'template/header.content'
 'template/page.template'

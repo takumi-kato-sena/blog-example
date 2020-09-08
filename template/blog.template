@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		@input("template/head.content")
+	</head>
+
+	<body>
+		@input("template/header.content")
+		@system{content}("pandoc -f markdown -t html --no-highlight")
+	</body>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.0/build/styles/default.min.css">
+	<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.0/build/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad()</script>
+</html>

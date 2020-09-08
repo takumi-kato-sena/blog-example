@@ -1,9 +1,11 @@
-<html>
+<!DOCTYPE html>
+<html lang="ja">
 	<head>
 		@input("template/head.content")
 	</head>
 
 	<body>
+		@input("template/header.content")
 		@content
 	</body>
 </html>

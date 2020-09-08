@@ -1,0 +1,7 @@
+<nav class="flex">
+  <p>Example</p>
+  <div class="ml-10">
+    <a href="/" class="pl-5 pr-5">ホーム</a>
+    <a href="/blog.html" class="pl-5 pr-5">ブログ</a>
+  </div>
+</nav>
