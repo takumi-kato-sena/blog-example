@@ -10,6 +10,10 @@
 'サンプル記事'
 'template/blog.template'
 
+'post/2020-09-09-hoge'
+'Hoge'
+'template/blog.template'
+
 'post/2020-09-09-test'
 'テスト'
 'template/blog.template'

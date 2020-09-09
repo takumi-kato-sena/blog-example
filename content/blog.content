@@ -1,3 +1,18 @@
-<div id="blog">
-  @input("posts.html")
-</div>
+@input("posts.html")
+
+@paginate
+@paginate.no_items_per_page(2)
+@paginate.separator("<hr>\n")
+@paginate.template
+{
+  <div id="blog">
+    $[paginate.page]
+  </div>
+  <div>
+    @if{!s}($[paginate.page_no] > 1)
+      <a href="@pathtopageno(@`$[paginate.page_no]-1`)">前へ</a>
+    @if{!s}($[paginate.page_no] < $[paginate.no_pages])
+      <a href="@pathtopageno(@`$[paginate.page_no]+1`)">次へ</a>
+  </div>
+  
+}

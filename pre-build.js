@@ -2,7 +2,7 @@
 const path = require('path')
 const fs = require('fs/promises')
 const fm = require('front-matter')
-const { JSDOM } = require('jsdom')
+const dedent = require('dedent')
 
 const BASE_DIR = path.resolve(__dirname)
 const POST_DIR = path.join(BASE_DIR, './content/post')
@@ -81,32 +81,23 @@ const getMetaDataList = async () => {
 }
 
 /**
- * 記事リストアイテムのHTML要素を生成
+ * 記事リストアイテムのHTMLを生成
  * @param {{ fileName: string, attributes: {[key: string]: string} }} metaData - 記事メタデータ
- * @returns {HTMLAnchorElement} a要素
+ * @returns {string}
 */
 const generatePostListItem = (metaData) => {
-  const jsdom = new JSDOM()
-  const document = jsdom.window.document
-
   const { fileName, attributes } = metaData
-
-  // a要素の生成
-  const aElement = document.createElement('a')
   const postName = fileName.replace('.content', '')
-  aElement.href = `./post/${postName}.html`
 
-  // h2要素の生成
-  const headingElement = document.createElement('h2')
-  headingElement.textContent = attributes.title
-  aElement.appendChild(headingElement)
-
-  // p要素の生成
-  const pElement = document.createElement('p')
-  pElement.textContent = attributes.description
-  aElement.appendChild(pElement)
-
-  return aElement
+  return dedent(`
+    @item
+    {
+      <a href="@pathto(post/${postName})">
+        <h2 class="border-b-0">${attributes.title}</h2>
+        <p>${attributes.description}</p>
+      </a>
+    }
+  `)
 }
 
 /**
@@ -114,12 +105,7 @@ const generatePostListItem = (metaData) => {
 */
 const savePostListHTML = async () => {
   const metaDataList = await getMetaDataList()
-
-  const postItems = metaDataList.map(metaData => {
-    const postListItem = generatePostListItem(metaData)
-    return postListItem.outerHTML
-  })
-
+  const postItems = metaDataList.map(metaData => generatePostListItem(metaData))
   const html = postItems.join('\n')
   saveHTML('posts', html)
 }

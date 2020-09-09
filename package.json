@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "front-matter": "^4.0.2",
-    "jsdom": "^16.4.0"
+    "dedent": "^0.7.0",
+    "front-matter": "^4.0.2"
   }
 }
