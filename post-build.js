@@ -13,4 +13,4 @@ const deleteFile = async (fileName) => {
   return fs.unlink(filePath)
 }
 
-deleteFile('post.json')
+deleteFile('posts.html')

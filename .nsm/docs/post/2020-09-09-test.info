@@ -1,11 +1,10 @@
 14:24:41 Wednesday September 09 2020
-'index'
-'ホーム'
-'template/page.template'
+'post/2020-09-09-test'
+'テスト'
+'template/blog.template'
 
-'content/index.content'
 'post-build.js'
 'pre-build.js'
+'template/blog.template'
 'template/head.content'
 'template/header.content'
-'template/page.template'
