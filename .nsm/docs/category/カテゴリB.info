@@ -1,9 +1,10 @@
 20:26:36 Friday September 18 2020
-'index'
-'ホーム'
+'category/カテゴリB'
+'カテゴリB'
 'template/page.template'
 
-'content/index.content'
+'category/カテゴリB.html'
+'content/category/カテゴリB.content'
 'post-build.ts'
 'template/head.content'
 'template/header.content'

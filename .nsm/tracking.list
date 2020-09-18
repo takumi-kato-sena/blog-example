@@ -2,6 +2,18 @@
 'ブログ'
 'template/page.template'
 
+'category'
+'カテゴリ一覧'
+'template/page.template'
+
+'category/カテゴリA'
+'カテゴリA'
+'template/page.template'
+
+'category/カテゴリB'
+'カテゴリB'
+'template/page.template'
+
 'index'
 'ホーム'
 'template/page.template'

@@ -14,5 +14,4 @@
     @if{!s}($[paginate.page_no] < $[paginate.no_pages])
       <a href="@pathtopageno(@`$[paginate.page_no]+1`)">次へ</a>
   </div>
-  
 }

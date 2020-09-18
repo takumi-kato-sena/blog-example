@@ -1,12 +1,11 @@
-18:58:53 Wednesday September 09 2020
+20:26:36 Friday September 18 2020
 'blog'
 'ブログ'
 'template/page.template'
 
 'content/blog.content'
-'post-build.js'
+'post-build.ts'
 'posts.html'
-'pre-build.js'
 'template/head.content'
 'template/header.content'
 'template/page.template'

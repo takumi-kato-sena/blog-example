@@ -3,5 +3,6 @@
   <div class="ml-10">
     <a href="@pathto(index)" class="pl-5 pr-5">ホーム</a>
     <a href="@pathto(blog)" class="pl-5 pr-5">ブログ</a>
+    <a href="@pathto(category)" class="pl-5 pr-5">カテゴリ</a>
   </div>
 </nav>
